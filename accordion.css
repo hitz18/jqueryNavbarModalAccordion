@@ -1,0 +1,100 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    background-image: url("IronVSCap.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+
+.accordion {
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+#iron {
+    background: #F00000;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #DC281E, #F00000);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #DC281E, #F00000);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: yellow;
+}
+
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+.active,
+#iron:hover {
+    background: #fe8c00;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #f83600, #fe8c00);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #f83600, #fe8c00);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: red;
+}
+
+
+/* Style the Ironman accordion panel.  */
+
+#ironPanel {
+    background-image: url("teamiron.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+
+#cap {
+    background: #005C97;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #363795, #005C97);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #363795, #005C97);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+}
+
+
+/* Add a background color to the Captain America button if it is clicked on (add the .active class with JS) or (hover) */
+
+.active,
+#cap:hover {
+    background: #ADA996;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: blue;
+}
+
+
+/* Style the Captain America accordion panel. */
+
+#capPanel {
+    background-image: url("teamcap.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+.panel p {
+    color: Black;
+}

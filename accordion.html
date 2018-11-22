@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+      <title>Responsive Navbar</title>
+      <link rel="stylesheet" type="text/css" href="main.css">
+      <link rel="stylesheet" type="text/css" href="accordion.css">
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+   </head>
+   <body>
+      <nav class="Menubar">
+         <div class="toggleMenu" id="jsMenuToggle">
+            <i class="fas fa-bars"></i>
+         </div>
+         <a href="#" class="logo">Avengers Assemble</a>
+         <ul class="mainMenu" id="js-menu">
+            <li>
+               <a href="index.html" class="menuOptions">Home</a>
+            </li>
+            <li>
+               <a href="accordion.html" class="menuOptions">Civil War</a>
+            </li>
+            <li>
+               <a href="modal.html" class="menuOptions">Infinity War</a>
+            </li>
+            <li>
+               <div class="searchContainer">
+                  <input class="searchBox" type="search" name="search" placeholder="Search...">
+                  <input type="submit" value="Search" class="searchButton">
+               </div>
+            </li>
+         </ul>
+      </nav>
+      <div class="content">
+         <button class="accordion" id="iron">Team Iron</button>
+         <div class="panel" id="ironPanel">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+         </div>
+         <button class="accordion" id="cap">Team Cap</button>
+         <div class="panel" id="capPanel" >
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+         </div>
+      </div>
+      <script src="jquery-3.3.1.min.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function() {
+    let mainNav = document.getElementById('js-menu');
+    let navBarToggle = document.getElementById('jsMenuToggle');
+
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+
+            /* Toggle between hiding and showing the active panel */
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+
+
+
+    navBarToggle.addEventListener('click', function() {
+        mainNav.classList.toggle('active');
+    });
+
+})
+      </script>
+   </body>
+</html>
